@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>{{page_title}}</h2>
+
+    <table class="table table-striped" *ngIf="users">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Nacimiento</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Dirección</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of users">
+            <td>{{item.id}}</td>
+            <td>{{item.user.name}}</td>
+            <td>{{item.user.fecha_nacimento}}</td>
+            <td>{{item.user.edad}}</td>
+            <td>{{item.domicilio}}</td>
+          </tr>
+    </tbody>
+    </table>
+    
+</div>
